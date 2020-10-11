@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.db import models
+from .validators import validate_file_extension
 
 
 class UserManager(BaseUserManager):
@@ -51,10 +52,11 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_staff = models.BooleanField(default=False)
     date_joined = models.DateTimeField(auto_now_add=True)
     USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['name', 'cellphone']
 
 
 class Full(models.Model):
-    full_video = models.FileField()
+    full_video = models.FileField(validators=[validate_file_extension])
     date = models.DateTimeField()
     size = models.CharField(max_length=20)
     storage_path = models.CharField(max_length=50)
@@ -63,9 +65,8 @@ class Full(models.Model):
 
 
 class Edited(models.Model):
-    edited_video = models.FileField()
+    edited_video = models.FileField(validators=[validate_file_extension])
     abnormal_type = models.CharField(max_length=20)
     edited_date = models.DateTimeField()
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='edited')
     full = models.ForeignKey(Full, on_delete=models.SET_NULL, null=True, related_name='parts')
-
