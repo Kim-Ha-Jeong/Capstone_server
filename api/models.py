@@ -51,3 +51,21 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_staff = models.BooleanField(default=False)
     date_joined = models.DateTimeField(auto_now_add=True)
     USERNAME_FIELD = 'email'
+
+
+class Full(models.Model):
+    full_video = models.FileField()
+    date = models.DateTimeField()
+    size = models.CharField(max_length=20)
+    storage_path = models.CharField(max_length=50)
+    recording_time = models.TimeField()
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='full')
+
+
+class Edited(models.Model):
+    edited_video = models.FileField()
+    abnormal_type = models.CharField(max_length=20)
+    edited_date = models.DateTimeField()
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='edited')
+    full = models.ForeignKey(Full, on_delete=models.SET_NULL, null=True, related_name='parts')
+
