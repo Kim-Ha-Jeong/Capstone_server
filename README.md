@@ -2,9 +2,12 @@
 ![image](https://user-images.githubusercontent.com/61506233/100989312-15140e80-3594-11eb-956e-30632ad1a4c9.png)
 - 딥러닝 기반 자동편집 블랙박스 어플리케이션
 
-## 1) 시연영상
-- 유트브 링크 : 
 
+
+## 1) 시연영상
+[![매직박스 시연영상](https://img.youtube.com/vi/DIdkWv8J9d8/0.jpg)](https://www.youtube.com/watch?v=DIdkWv8J9d8&feature=youtu.be)
+
+링크 : https://www.youtube.com/watch?v=DIdkWv8J9d8&feature=youtu.be
 
 ## 2) 프로젝트 소개
 ### 개발 배경
@@ -55,8 +58,37 @@
 
 ## 4) 기술 블로그
 - 딥러닝 기술블로그 : https://kkminyoung.tistory.com/14
-- 안드로이드 기술블로그 : 
-- 백엔드 기술블로그 : 
+- 안드로이드 기술블로그1 : https://csepotato.tistory.com/
+- 안드로이드 기술블로그2 : https://jungyoonn.tistory.com/
+- 백엔드 기술블로그 : https://cococode.tistory.com/
+
+### 진행상황
+#### 딥러닝
+- [X] 문제정의 및 딥러닝 조사
+- [X] 주행 중 모델 구축
+- [X] 주차 중 모델 구축
+- [X] 데이터 추가수집
+- [ ] 음성인식 모델 구축
+- [ ] API 배포
+
+#### 안드로이드
+- [X] 인터페이스 구성     https://csepotato.tistory.com/3 , https://jungyoonn.tistory.com/3
+- [X] figma로 UI 구성    https://csepotato.tistory.com/2
+- [X] 회원가입/로그인 화면 구성  https://csepotato.tistory.com/4 , https://csepotato.tistory.com/5
+- [X] 메인 화면 구성            https://csepotato.tistory.com/4 , https://csepotato.tistory.com/5
+- [X] 영상 녹화 API 삽입
+- [ ] 수정 및 버그 캐치
+
+#### 백엔드
+- [X] 데이터베이스 설계 https://cococode.tistory.com/2  
+- [X] Django + Mysql 연결 https://cococode.tistory.com/3
+- [X] 데이터베이스 구현 https://cococode.tistory.com/4
+- [X] REST API(안드로이드용) https://cococode.tistory.com/5
+- [ ] pytorch용 데이터베이스 설계 및 구현 
+- [ ] REST API(딥러닝용) 
+- [ ] AWS 호스팅
+- [ ] 앱 및 딥러닝 연결 
+
 
 ## 5) License
 
