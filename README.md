@@ -91,7 +91,7 @@
 
 
 ## 5) License
-
+Code is under the [Apache Licence v2](https://github.com/Kim-Ha-Jeong/Capstone_server/blob/master/LICENSE)
 
 # 프로젝트 레파지토리 정리
 - 딥러닝 repository : https://github.com/kkminyoung/Capstone_model
